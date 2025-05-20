@@ -3,7 +3,7 @@ import React from 'react'
 export default function page() {
   return (
     <div>
-      <h3>dashboard Setting page</h3>
+      <h1>Scale</h1>
     </div>
   )
 }

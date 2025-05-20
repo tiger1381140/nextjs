@@ -1,9 +1,11 @@
-import React from 'react'
+import Hero from "@/components/hero";
 
-export default function page() {
+const reliabilitySrc = "/images/reliability.jpg";
+const reliabilityTitle = "welcome to the best platform for reliability";
+const reliabilityDescription = "welcome to the best platform for reliability";
+
+export default function Page () {
   return (
-    <div>
-      <h1>Reliablity</h1>
-    </div>
-  )
+    <Hero imageSrc={reliabilitySrc} title={reliabilityTitle} description={reliabilityDescription}/>
+  );
 }

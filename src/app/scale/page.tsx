@@ -1,9 +1,11 @@
-import React from 'react'
+import Hero from "@/components/hero";
 
-export default function page() {
+const scaleSrc = "/images/scale.jpg";
+const scaleTitle = "welcome to the best platform for scale";
+const scaleDescription = "welcome to the best platform for scale";
+
+export default function Page () {
   return (
-    <div>
-      <h1>Scale</h1>
-    </div>
-  )
+    <Hero imageSrc={scaleSrc} title={scaleTitle} description={scaleDescription}/>
+  );
 }

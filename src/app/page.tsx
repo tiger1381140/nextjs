@@ -1,8 +1,11 @@
-import Image from "next/image";
+import Hero from "@/components/hero";
 
-export default function Home() {
+const homeSrc = "/images/home.jpg";
+const homeTitle = "welcome to the best platform for home";
+const homeDescription = "welcome to the best platform for home";
+
+export default function Page () {
   return (
-    <div>
-    </div>
+    <Hero imageSrc={homeSrc} title={homeTitle} description={homeDescription}/>
   );
 }

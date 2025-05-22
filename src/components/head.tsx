@@ -12,13 +12,6 @@ const linkData = [
 export default function head() {
   const pathname = usePathname()
 
-  let found = false 
-  for (const item of linkData) {
-    if (pathname === item.path) { found = true; break }
-  }
-  if (pathname === '/') { found = true }
-  if (!found) { return null }
-
   return (
     <div className='absolute w-full z-10'>
       <div className="flex justify-between container mx-auto mt-8 text-lg font-bold">

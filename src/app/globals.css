@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'RobotoVF';
+    src: url('/fonts/roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900; /* 支持从 Thin 到 Black */
+    font-stretch: 75% 125%;
+    font-style: normal;
+}
+
+.roboto-font {
+    font-family: 'RobotoVF', sans-serif;
+}
+
 .not-found {
     .cls-1{fill:#d6b49a;}
     .cls-1,

@@ -23,6 +23,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
     "@eslint/eslintrc": "^3",
+    "@ant-design/nextjs-registry": "^1.0.2",
     "antd": "^5.0.0"
   }
 }

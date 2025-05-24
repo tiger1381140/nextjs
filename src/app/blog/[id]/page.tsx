@@ -1,14 +1,28 @@
 import React from 'react'
-import BlogUserDetail from '@/components/blogUserDetail'
+import { Card } from 'antd'
 import { data } from '@/data'
 
-export const generateMetadata = async ({params}: {params: {id: string}}) => {
-  const item = data.find((item) => item.id === parseInt(params.id))!
+interface IParams {
+  params: {
+    id: string
+  }
+}
+
+export async function generateMetadata({params}: IParams) {
+  const resolvedParams = await Promise.resolve(params)
+  const item = data.find((item) => item.id === parseInt(resolvedParams.id))!
   return {
     title: item.meta,
   }
 }
 
-export default function page( {params}: {params: {id: string}} ) {
-  return <BlogUserDetail params={params} />
+export default async function Page({ params }: IParams) {
+    const resolvedParams = await Promise.resolve(params)
+    const item = data.find((item) => item.id === parseInt(resolvedParams.id))!
+
+    return (
+      <Card title={item.title}>
+          <p>{item.body}</p>
+      </Card>
+    )
 }

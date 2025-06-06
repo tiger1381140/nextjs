@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -8,19 +7,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  modal,
   children,
 }: Readonly<{
-  modal: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body className="roboto-font">
-        <AntdRegistry>
-          {children}
-          {modal}
-        </AntdRegistry>
+      <body className="roboto-font bg-black">
+        {children}
       </body>
     </html>
   );
